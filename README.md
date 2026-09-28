@@ -2,149 +2,93 @@
 
 
 
-\## Project Objective
+A hands-on Cloud and DevOps project focused on designing, deploying, securing, and automating a real-world multi-tier application infrastructure on AWS.
 
 
 
-Design, deploy, secure, and automate a real-world AWS application infrastructure where users can access the application through a controlled public entry point while application servers and sensitive data remain protected inside private networks.
+\---
 
 
 
-\## Simple Architecture
+\## 🎯 Project Objective
 
 
 
-Internet
+Design and deploy a secure AWS infrastructure where:
 
-&#x20;  |
 
-&#x20;  v
 
-Public Load Balancer
+\- Users can access the application from the internet.
 
-&#x20;  |
+\- Public access is controlled through a load balancer.
 
-&#x20;  +-------------------+
+\- Application servers remain inside private subnets.
 
-&#x20;  |                   |
+\- Sensitive data remains inside a private database.
 
-&#x20;  v                   v
+\- Infrastructure is gradually automated using Terraform.
 
-Private App Server 1  Private App Server 2
+\- Deployment and operational tasks are automated using DevOps tools.
 
-&#x20;  |                   |
 
-&#x20;  +---------+---------+
 
-&#x20;            |
+The project is being built step by step, starting with AWS networking and gradually introducing EC2, load balancing, Docker, Terraform, CI/CD, monitoring, and Kubernetes.
 
-&#x20;            v
 
-&#x20;      Private Database
 
-All components will be deployed inside an AWS VPC.
+\---
 
 
 
-\## Network Design
+\## 🏗️ Planned Architecture
 
 
 
-VPC:
+```text
 
-10.50.0.0/16
+&#x20;                        INTERNET
 
+&#x20;                            |
 
+&#x20;                            v
 
-Public Subnet A:
+&#x20;                 +----------------------+
 
-10.50.1.0/24
+&#x20;                 |   Public Load        |
 
+&#x20;                 |      Balancer        |
 
+&#x20;                 +----------+-----------+
 
-Public Subnet B:
+&#x20;                            |
 
-10.50.2.0/24
+&#x20;                  +---------+---------+
 
+&#x20;                  |                   |
 
+&#x20;                  v                   v
 
-Private Subnet A:
+&#x20;         +----------------+   +----------------+
 
-10.50.11.0/24
+&#x20;         | App Server 1   |   | App Server 2   |
 
+&#x20;         |    PRIVATE     |   |    PRIVATE     |
 
+&#x20;         +-------+--------+   +-------+--------+
 
-Private Subnet B:
+&#x20;                 |                    |
 
-10.50.12.0/24
+&#x20;                 +---------+----------+
 
+&#x20;                           |
 
+&#x20;                           v
 
-\## Technologies
+&#x20;                  +------------------+
 
+&#x20;                  |     Database     |
 
+&#x20;                  |     PRIVATE      |
 
-\- AWS
-
-\- Linux
-
-\- Networking
-
-\- AWS CLI
-
-\- EC2
-
-\- VPC
-
-\- Load Balancing
-
-\- Docker
-
-\- Terraform
-
-\- GitHub
-
-\- GitHub Actions
-
-\- CloudWatch
-
-\- Kubernetes
-
-
-
-\## Project Phases
-
-
-
-1\. GitHub and project documentation
-
-2\. AWS CLI setup
-
-3\. IAM setup
-
-4\. VPC and networking
-
-5\. EC2
-
-6\. Security
-
-7\. Load Balancing
-
-8\. Docker
-
-9\. Terraform
-
-10\. CI/CD
-
-11\. Monitoring
-
-12\. Kubernetes
-
-
-
-\## Current Status
-
-
-
-Project initialization.
+&#x20;                  +------------------+
 
