@@ -352,8 +352,8 @@ A public NAT Gateway requires an Elastic IP.
 aws ec2 allocate-address --domain vpc
 ```
 
-- Allocation ID: `eipalloc-089e44d108ff576b7`
-- Public IP: `13.126.221.84`
+- Allocation ID: `<ID>`
+- Public IP: `<IP>`
 - Domain: `vpc`
 
 ---
