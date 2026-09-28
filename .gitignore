@@ -1,0 +1,14 @@
+.aws/
+*.pem
+*.key
+.env
+*.env
+
+.terraform/
+*.tfstate
+*.tfstate.*
+
+*.log
+
+.vscode/
+.idea/
